@@ -5,15 +5,23 @@ import script from './const/script';
 import SlideTypes from './const/slide-types';
 import state from './state';
 import FlashScreen from './screens/flash';
+import ImageScreen from './screens/image';
 
 class App {
   screenFactory(screenData, $parent) {
+    let ScreenClass = null;
     switch (screenData.type) {
       case SlideTypes.FLASH:
-        return new FlashScreen(screenData, $parent);
+        ScreenClass = FlashScreen;
+        break;
 
+
+      case SlideTypes.IMAGE:
+        ScreenClass = ImageScreen;
+        break;
       default:
     }
+    return new ScreenClass(screenData, $parent);
   }
 
   removeScreenFromState(screenIndex) {
@@ -26,7 +34,7 @@ class App {
 
   createCurrentScreen() {
     this.hideOldScreens();
-    
+
     const newScreen = this.screenFactory(script[state.index], this.$node);
 
     newScreen.on('SCREEN_REMOVED', data =>
