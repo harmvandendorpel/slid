@@ -79,7 +79,6 @@ class App {
 
   preventContextMenu() {
     $(window).bind('contextmenu', e => {
-      console.log('no menu');
       e.preventDefault();
     });
   }
