@@ -4,6 +4,7 @@ const script = [
   { file: 'img/a.jpg', type: SlideTypes.IMAGE },
   { file: 'img/b.jpg', type: SlideTypes.IMAGE },
   { file: 'img/a.png', type: SlideTypes.IMAGE },
+  { url: 'http://death.imitates.org/', type: SlideTypes.IFRAME },
   { file: 'img/b.png', type: SlideTypes.IMAGE },
   { file: 'swf/drostescrolls.swf', type: SlideTypes.FLASH },
   { file: 'img/d.jpg', type: SlideTypes.IMAGE },

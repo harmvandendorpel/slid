@@ -6,6 +6,7 @@ import SlideTypes from './const/slide-types';
 import state from './state';
 import FlashScreen from './screens/flash';
 import ImageScreen from './screens/image';
+import IFrameScreen from './screens/iframe';
 
 class App {
   screenFactory(screenData, $parent) {
@@ -19,6 +20,11 @@ class App {
       case SlideTypes.IMAGE:
         ScreenClass = ImageScreen;
         break;
+
+      case SlideTypes.IFRAME:
+        ScreenClass = IFrameScreen;
+        break;
+
       default:
     }
     return new ScreenClass(screenData, $parent);
@@ -37,12 +43,19 @@ class App {
 
     const newScreen = this.screenFactory(script[state.index], this.$node);
 
-    newScreen.on('SCREEN_REMOVED', data => {
-        console.log('screen removed');
-        this.removeScreenFromState(data.index);
-      }
+    newScreen.on('SCREEN_REMOVED', data =>
+      this.removeScreenFromState(data.index)
     );
 
+    newScreen.on('REQUEST_NEXT_SCREEN', () =>
+      this.nextScreen()
+    );
+
+    newScreen.on('REQUEST_PREVIOUS_SCREEN', () =>
+      this.previousScreen()
+    );
+  
+    this.preventContextMenu();
     state.screens.push(newScreen);
   }
 
@@ -64,15 +77,16 @@ class App {
     this.createCurrentScreen();
   }
 
-  initInputEvents() {
-    $(window).bind('contextmenu', function(e) {
-      console.log('ctx menu button:', e.which);
+  preventContextMenu() {
+    $(window).bind('contextmenu', e => {
+      console.log('no menu');
       e.preventDefault();
     });
+  }
 
+  initInputEvents() {
     $(window)
       .bind('mousedown', (e) => {
-        console.log('test');
         e.preventDefault();
         switch (e.which) {
           case 3:
