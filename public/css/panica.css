@@ -51,7 +51,6 @@ iframe {
     bottom:0;
     right:0;
     background-color: rgba(0, 0, 0, 0.2);
-    cursor: crosshair;
     width: 5vw;
     height: 5vw;
 }
