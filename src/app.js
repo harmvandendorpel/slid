@@ -37,8 +37,10 @@ class App {
 
     const newScreen = this.screenFactory(script[state.index], this.$node);
 
-    newScreen.on('SCREEN_REMOVED', data =>
-      this.removeScreenFromState(data.index)
+    newScreen.on('SCREEN_REMOVED', data => {
+        console.log('screen removed');
+        this.removeScreenFromState(data.index);
+      }
     );
 
     state.screens.push(newScreen);
@@ -55,7 +57,7 @@ class App {
     state.index++;
     this.createCurrentScreen();
   }
-  
+
   previousScreen() {
     if (state.index === 0) return;
     state.index--;
@@ -63,9 +65,25 @@ class App {
   }
 
   initInputEvents() {
+    $(window).bind('contextmenu', function(e) {
+      console.log('ctx menu button:', e.which);
+      e.preventDefault();
+    });
+
     $(window)
-      .bind('mousedown', () => {
-        this.nextScreen();
+      .bind('mousedown', (e) => {
+        console.log('test');
+        e.preventDefault();
+        switch (e.which) {
+          case 3:
+            this.nextScreen();
+            break;
+          case 1:
+            this.previousScreen();
+            break;
+          default:
+        }
+        return false;
       })
       .bind('keyup', (e) => {
         switch (e.which) {
@@ -75,6 +93,7 @@ class App {
           case 39:
             this.nextScreen();
             break;
+          default:
         }
       });
   }
