@@ -12,7 +12,7 @@ body {
     line-height:125%;
 
     color: #bababa;
-    font-size: 24px;
+    font-size: 6vh;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@ body {
 }
 
 .result{
-    max-width: 800px;
+    max-width: 100%;
     padding: 50px;
 }
 
@@ -99,3 +99,7 @@ body {
     color:#ccc;
 }
 
+
+.class-RB {
+    font-style: italic;
+}
