@@ -1,0 +1,92 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Menlo, -apple-system, BlinkMacSystemFont,"helvetica neue", helvetica, arial, sans-serif;
+    line-height:125%;
+
+    color: #bababa;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stage {
+    background-color: #2b2b2b;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result{
+    max-width: 800px;
+    padding: 50px;
+}
+
+.result span {
+    display: inline-block;
+}
+
+.space {
+    margin-right: 12px;
+}
+
+.class-NN,
+.class-NNS {
+    color: #f0f0f0;
+}
+
+.class-NNS {
+
+}
+
+.class-VB,
+.class-VBP,
+.class-VBN,
+.class-VBZ,
+    /*.class-VBG,*/
+.class-MD {
+    /*color: #425765;*/
+    /*border-bottom:1px solid white;*/
+    color: #78add3;
+}
+
+.class-CC {
+    color: #c88852;
+}
+
+.class-IN {
+    color: #6f955d;
+}
+
+.class-NNP {
+    color:red;
+}
+
+.class-PRP {
+    color: #b3e889;
+}
+
+.class-CD {
+    color: #f2fc99;
+}
+
+.class-VBG,
+.class-JJ {
+    color: #e8bf6a;
+
+}

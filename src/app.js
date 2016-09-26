@@ -7,15 +7,15 @@ import state from './state';
 import FlashScreen from './screens/flash';
 import ImageScreen from './screens/image';
 import IFrameScreen from './screens/iframe';
+import WritingScreen from './screens/writing';
 
 class App {
-  screenFactory(screenData, $parent) {
+  static screenFactory(screenData, $parent) {
     let ScreenClass = null;
     switch (screenData.type) {
       case SlideTypes.FLASH:
         ScreenClass = FlashScreen;
         break;
-
 
       case SlideTypes.IMAGE:
         ScreenClass = ImageScreen;
@@ -23,6 +23,10 @@ class App {
 
       case SlideTypes.IFRAME:
         ScreenClass = IFrameScreen;
+        break;
+
+      case SlideTypes.TEXT:
+        ScreenClass = WritingScreen;
         break;
 
       default:
@@ -40,8 +44,8 @@ class App {
 
   createCurrentScreen() {
     this.hideOldScreens();
-
-    const newScreen = this.screenFactory(script[state.index], this.$node);
+    const currentScreenData = script[state.index];
+    const newScreen = App.screenFactory(currentScreenData, this.$node);
 
     newScreen.on('SCREEN_REMOVED', data =>
       this.removeScreenFromState(data.index)
@@ -54,7 +58,7 @@ class App {
     newScreen.on('REQUEST_PREVIOUS_SCREEN', () =>
       this.previousScreen()
     );
-  
+
     this.preventContextMenu();
     state.screens.push(newScreen);
   }

@@ -1,6 +1,7 @@
 import SlideTypes from './slide-types';
 
 const script = [
+  { type: SlideTypes.TEXT},
   { file: 'img/a.jpg', type: SlideTypes.IMAGE },
   { file: 'img/b.jpg', type: SlideTypes.IMAGE },
   { file: 'img/a.png', type: SlideTypes.IMAGE },

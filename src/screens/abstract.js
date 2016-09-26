@@ -13,18 +13,26 @@ export default class Screen extends EventEmitter {
     this.$screen = $('<div></div>').addClass('screen');
     this.$parent.append(this.$screen);
     setTimeout(() => {
-      this.$screen.css({
-        opacity: 1
-      });
+      this.show();
     }, 100);
+  }
+
+  show() {
+    this.$screen.css({
+      opacity: 1
+    });
+  }
+
+  hide() {
+    this.$screen.css({
+      opacity: 0
+    });
   }
 
   destroy() {
     if (this.commitSuicide) return;
     this.commitSuicide = true;
-    this.$screen.css({
-      opacity: 0
-    });
+    this.hide();
 
     setTimeout(() => {
       this.$screen.remove();
