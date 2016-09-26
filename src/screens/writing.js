@@ -2,7 +2,6 @@ import sha1 from 'sha1';
 import $ from 'jquery';
 import Screen from './abstract';
 const url = 'http://corenlp.run/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
-const DEFAULT_SENTENCE = 'It\'s the same brain. It\'s alive. It\'s undamaged. In fact, it\'s completely untouched. We haven\'t even opened the dura. The big difference, of course, would be that we\'ve severed every single nerve that leads into it - except for the one optic nerve - and this means that your thinking would no longer be influenced by your senses. You\'d be living in an extraordinarily pure and detached world. Nothing to bother you at all, not even pain. You couldn\'t possibly feel pain because there wouldn\'t be any nerves to feel it with. In a way, it would be an almost perfect situation. No worries or fears or pains or hunger or thirst. Not even any desires. Just your memories and your thoughts. ';
 
 export default class WritingScreen extends Screen {
   constructor(screenData, $parent) {
@@ -14,7 +13,8 @@ export default class WritingScreen extends Screen {
 
     this.cache = localStorage.getItem('NLPCACHE') ?
       JSON.parse(localStorage.getItem('NLPCACHE')) : {};
-    console.log(this.cache);
+
+    this.text = screenData.text;
     this.updateText();
   }
 
@@ -58,6 +58,6 @@ export default class WritingScreen extends Screen {
   }
 
   updateText() {
-    this.getData(DEFAULT_SENTENCE, (result) => this.displayResult(result));
+    this.getData(this.text, (result) => this.displayResult(result));
   }
 }

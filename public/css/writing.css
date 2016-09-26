@@ -62,7 +62,8 @@ body {
 .class-MD {
     /*color: #425765;*/
     /*border-bottom:1px solid white;*/
-    color: #78add3;
+    color: #7fafd8;
+
 }
 
 .class-CC {
@@ -90,3 +91,11 @@ body {
     color: #e8bf6a;
 
 }
+
+.class-WDT {
+}
+
+.class-DT {
+    color:#ccc;
+}
+
