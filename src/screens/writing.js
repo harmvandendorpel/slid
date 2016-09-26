@@ -3,6 +3,17 @@ import $ from 'jquery';
 import Screen from './abstract';
 const url = 'http://corenlp.run/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
 
+const CLASS_MAPPING = {
+  ',': 'comma',
+  '.': 'dot',
+  NN: 'NN',
+  VB: 'VB',
+  VBP: 'VBP',
+  NNS: 'NNS',
+  MD: 'MD',
+  IN: 'IN'
+};
+
 export default class WritingScreen extends Screen {
   constructor(screenData, $parent) {
     super(screenData, $parent);
@@ -32,7 +43,8 @@ export default class WritingScreen extends Screen {
   }
 
   decideClass(pos) {
-    return `class-${pos}`;
+    const mapping = CLASS_MAPPING[pos] || pos;
+    return `class-${mapping}`;
   }
 
   displaySentence(sentence) {

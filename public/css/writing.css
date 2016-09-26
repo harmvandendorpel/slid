@@ -45,13 +45,17 @@ body {
     margin-right: 12px;
 }
 
-.class-NN,
-.class-NNS {
-    color: #f0f0f0;
+.class-dot {
+    color: black;
 }
 
-.class-NNS {
+.class-comma {
+    color: #d5d510;
+}
 
+.class-NN,
+.class-NNS {
+    color: white
 }
 
 .class-VB,
@@ -63,6 +67,8 @@ body {
     /*color: #425765;*/
     /*border-bottom:1px solid white;*/
     color: #7fafd8;
+    /*text-decoration: underline;*/
+    /*text-decoration-color: #3b5163;*/
 
 }
 
@@ -102,4 +108,5 @@ body {
 
 .class-RB {
     font-style: italic;
+    color: #ccc;
 }
