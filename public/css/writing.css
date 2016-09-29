@@ -19,8 +19,17 @@ body {
     justify-content: center;
 }
 
+.token {
+    opacity: 0;
+    transition: opacity 250ms;
+    -webkit-transition: opacity 250ms;
+}
+
+.show {
+    opacity: 1;
+}
+
 .stage {
-    background-color: #2b2b2b;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -30,11 +39,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align:left;
 }
 
 .result{
-    max-width: 100%;
-    padding: 50px;
+    width: 100%;
+    padding: 5vw;
 }
 
 .result span {
@@ -42,7 +52,7 @@ body {
 }
 
 .space {
-    margin-right: 12px;
+    margin-right: 1.25vw;
 }
 
 .class-dot {
