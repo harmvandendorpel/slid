@@ -1,4 +1,5 @@
 import sha1 from 'sha1';
+import pluralize from 'pluralize';
 import $ from 'jquery';
 import Screen from './abstract';
 
@@ -13,7 +14,9 @@ const CLASS_MAPPING = {
   VBP: 'VBP',
   NNS: 'NNS',
   MD: 'MD',
-  IN: 'IN'
+  IN: 'IN',
+  '``': 'QUOTE',
+  '\'\'': 'QUOTE'
 };
 
 export default class WritingScreen extends Screen {
@@ -21,7 +24,9 @@ export default class WritingScreen extends Screen {
     super(screenData, $parent);
     this.$result = $('<div></div>').addClass('result');
     this.$stage = $('<div></div>').addClass('stage');
+    this.$dictionary = $('<div></div>').addClass('dictionary');
     this.$stage.append(this.$result);
+    this.$screen.append(this.$dictionary);
     this.$screen.append(this.$stage);
 
     this.cache = localStorage.getItem(LOCALSTORAGE_ID) ?
@@ -30,6 +35,9 @@ export default class WritingScreen extends Screen {
     this.text = screenData.text;
 
     this.tokenIndex = 0;
+
+    window.dictionary = window.dictionary || [];
+
     this.getData(this.text).then((result) => {
       this.result = result;
 
@@ -57,35 +65,81 @@ export default class WritingScreen extends Screen {
     return `class-${mapping}`;
   }
 
+  findDictionaryItem(word) {
+    return window.dictionary.find(item => item.text === word);
+  }
+
+  addToDictionary(word) {
+    const singularLowercaseWord = pluralize(word.toLowerCase(), 1);
+    const dictionaryItem = this.findDictionaryItem(singularLowercaseWord);
+    if (dictionaryItem === undefined) {
+      window.dictionary.push({
+        text: singularLowercaseWord,
+        count: 1
+      });
+    } else {
+      dictionaryItem.count++;
+    }
+    window.dictionary.sort((a, b) => a.count > b.count);
+  }
+
   displayToken(token) {
     const $word = $('<span></span>')
       .text(token.originalText)
       .addClass('token')
       .addClass(this.decideClass(token.pos));
 
+    switch (token.pos) {
+      case 'NN':
+      case 'NNS':
+        this.addToDictionary(token.originalText);
+        break;
+
+      default:
+    }
+
     this.$result.append($word);
-    setTimeout(() => $word.addClass('show'), 50);
     if (token.after === ' ') {
       $word.addClass('space');
     }
+
+    setTimeout(() => {
+      $word.addClass('show');
+      this.updateDictionary();
+    }, 50);
+  }
+
+  updateDictionary() {
+    const selection = window.dictionary.slice(-10);
+    this.$dictionary.html('');
+
+    selection.forEach((word) => {
+      const $token = $('<div></div>').addClass('dictionary-token');
+      if (word.count > 1) {
+        $token.text(`${word.text} (${word.count})`);
+      } else {
+        $token.text(`${word.text}`);
+      }
+      this.$dictionary.append($token);
+    });
   }
 
   wait() {
     const token = this.tokens[this.tokenIndex];
-    const text = token.originalText;
     let duration = null;
 
-    switch (text) {
+    switch (token.originalText) {
       case ',':
         duration = 2000;
         break;
 
       case '.':
         duration = 3000;
+        // token.originalText = '⬚';
         break;
 
       default:
-        duration = text.length * 150 + 200;
+        duration = token.originalText.length * 125 + 200;
     }
 
     this.displayToken(token);

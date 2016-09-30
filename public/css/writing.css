@@ -21,12 +21,14 @@ body {
 
 .token {
     opacity: 0;
-    transition: opacity 250ms;
-    -webkit-transition: opacity 250ms;
+    transition:         opacity 500ms, -webkit-filter 500ms linear;
+    -webkit-transition: opacity 500ms, -webkit-filter 500ms linear;
+    -webkit-filter: blur(10px);
 }
 
 .show {
     opacity: 1;
+    -webkit-filter: blur(0px);
 }
 
 .stage {
@@ -56,9 +58,12 @@ body {
 }
 
 .class-dot {
-    color: black;
+    color: #7be1b6;
 }
 
+.class-QUOTE {
+    color: #11dd11;
+}
 .class-comma {
     color: #d5d510;
 }
@@ -72,6 +77,7 @@ body {
 .class-VBP,
 .class-VBN,
 .class-VBZ,
+.class-VBG,
     /*.class-VBG,*/
 .class-MD {
     /*color: #425765;*/
@@ -102,10 +108,8 @@ body {
     color: #f2fc99;
 }
 
-.class-VBG,
 .class-JJ {
-    color: #e8bf6a;
-
+    /*color: #e8bf6a;*/
 }
 
 .class-WDT {
@@ -115,8 +119,25 @@ body {
     color:#ccc;
 }
 
-
+.class-JJ,
 .class-RB {
     font-style: italic;
     color: #ccc;
+}
+
+.dictionary {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.dictionary-token {
+    font-size: 1vw;
+    float: right;
+    line-height: 100%;
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+    background-color: black;
+    color: white;
+    margin: 0.5vw;
 }
