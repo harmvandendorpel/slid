@@ -1,5 +1,6 @@
 import EventEmitter from 'events';
 import $ from 'jquery';
+import SoundPlayer from '../sound';
 
 const FADE_DURATION = 2000;
 
@@ -9,6 +10,10 @@ export default class Screen extends EventEmitter {
 
     this.screenData = screenData;
     this.$parent = $parent;
+
+    if (this.screenData.sound) {
+      this.soundPlayer = new SoundPlayer(this.screenData.sound);
+    }
 
     this.$screen = $('<div></div>').addClass('screen');
     this.$parent.append(this.$screen);
@@ -33,6 +38,10 @@ export default class Screen extends EventEmitter {
     if (this.commitSuicide) return;
     this.commitSuicide = true;
     this.hide();
+
+    if (this.soundPlayer) {
+      this.soundPlayer.destroy();
+    }
 
     setTimeout(() => {
       this.$screen.remove();

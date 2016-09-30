@@ -1,10 +1,10 @@
 import SlideTypes from './slide-types';
 
 const script = [
+  { url: '/autobreeder/demo.html', type: SlideTypes.IFRAME, sound: '/sound/sound1.wav' },
   { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
-  { type: SlideTypes.TEXT, text: 'She asked me, "how can you know you know something?"' },
   
-  { url: '/autobreeder/demo.html', type: SlideTypes.IFRAME },
+  { type: SlideTypes.TEXT, text: 'She asked me, "how can you know you know something?"' },
   { type: SlideTypes.TEXT, text: 'We\'re exploring.' },
   { url: '/turtles/', type: SlideTypes.IFRAME },
   { type: SlideTypes.TEXT, text: 'We\'re trying to find out as much as we can about the world.' },
