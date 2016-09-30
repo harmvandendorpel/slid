@@ -4,6 +4,7 @@ const script = [
   { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
   { type: SlideTypes.TEXT, text: 'She asked me, "how can you know you know something?"' },
   { type: SlideTypes.TEXT, text: 'We\'re exploring.' },
+  { url: 'http://clubinternet.org/works/turtles/', type: SlideTypes.IFRAME },
   { type: SlideTypes.TEXT, text: 'We\'re trying to find out as much as we can about the world.' },
   { type: SlideTypes.TEXT, text: 'People sometimes ask me: "are you looking for the ultimate truth?"' },
   { type: SlideTypes.TEXT, text: 'No, I\'m not.' },

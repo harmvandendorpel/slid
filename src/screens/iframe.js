@@ -8,7 +8,7 @@ export default class IFrameScreen extends Screen {
 
     this.$navigationButtons.bind('mousedown', (e) => {
       this.$overlay.toggle();
-      this.$navigationButtons.toggleClass('active')
+      this.$navigationButtons.toggleClass('active');
       e.preventDefault();
       return false;
     });

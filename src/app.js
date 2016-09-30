@@ -43,6 +43,7 @@ class App {
   }
 
   createCurrentScreen() {
+    console.log('create screen');
     this.hideOldScreens();
     const currentScreenData = script[state.index];
     const newScreen = App.screenFactory(currentScreenData, this.$node);
@@ -95,15 +96,21 @@ class App {
           case 3:
             this.nextScreen();
             break;
+
           case 1:
             this.previousScreen();
             break;
+
           default:
         }
         return false;
       })
       .bind('keyup', (e) => {
         switch (e.which) {
+          case 82: // key 'r'
+            this.createCurrentScreen();
+            break;
+
           case 37:
             this.previousScreen();
             break;
@@ -124,7 +131,7 @@ class App {
     timeDiff = Math.floor(timeDiff / 60);
     const minutes = this.pad(Math.round(timeDiff % 60), 2);
 
-    this.$timer.text(`${minutes}:${seconds}`);
+    this.$timer.text(`${minutes}:${seconds} – ${state.index + 1} / ${script.length}`);
   }
 
   pad(num, size) {
