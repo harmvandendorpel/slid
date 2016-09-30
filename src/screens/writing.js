@@ -116,9 +116,9 @@ export default class WritingScreen extends Screen {
     selection.forEach((word) => {
       const $token = $('<div></div>').addClass('dictionary-token');
       if (word.count > 1) {
-        $token.text(`${word.text} (${word.count})`);
+        $token.text(`#${word.text} (${word.count})`);
       } else {
-        $token.text(`${word.text}`);
+        $token.text(`#${word.text}`);
       }
       this.$dictionary.append($token);
     });

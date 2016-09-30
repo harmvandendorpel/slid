@@ -107,7 +107,7 @@ class App {
       })
       .bind('keyup', (e) => {
         switch (e.which) {
-          case 82: // key 'r'
+          case 78: // key 'n'
             this.createCurrentScreen();
             break;
 
@@ -117,6 +117,16 @@ class App {
           case 39:
             this.nextScreen();
             break;
+
+          default:
+        }
+      })
+      .bind('keydown', (e) => {
+        switch (e.which) {
+          case 82:
+            e.preventDefault();
+            return false;
+
           default:
         }
       });
