@@ -58,11 +58,11 @@ body {
 }
 
 .class-dot {
-    color: #7be1b6;
+    color: black;
 }
 
 .class-QUOTE {
-    color: #11dd11;
+    color: #dd9f98;
 }
 .class-comma {
     color: #d5d510;
@@ -120,6 +120,7 @@ body {
 }
 
 .class-JJ,
+.class-VBD,
 .class-RB {
     font-style: italic;
     color: #ccc;
@@ -129,10 +130,19 @@ body {
     position: fixed;
     top: 0;
     right: 0;
+    padding:4vw;
+
+    opacity: 0;
+    transition:         opacity 500ms;
+    -webkit-transition: opacity 500ms;
+}
+
+.dictionary-show {
+    opacity: 1;
 }
 
 .dictionary-token {
-    font-size: 1vw;
+    font-size: 1.5vw;
     float: right;
     line-height: 100%;
     padding: 0.5vw;

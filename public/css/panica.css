@@ -67,3 +67,13 @@ iframe {
 .navigation-buttons.active {
     background-color: rgba(0, 255, 0, 0.2);
 }
+
+
+.timer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding:4vw;
+    font-size: 1vw;
+    line-height:100%;
+}

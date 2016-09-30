@@ -24,9 +24,9 @@ export default class WritingScreen extends Screen {
     super(screenData, $parent);
     this.$result = $('<div></div>').addClass('result');
     this.$stage = $('<div></div>').addClass('stage');
-    this.$dictionary = $('<div></div>').addClass('dictionary');
+    this.$dictionary = $('.dictionary');
+    this.$dictionary.addClass('dictionary-show');
     this.$stage.append(this.$result);
-    this.$screen.append(this.$dictionary);
     this.$screen.append(this.$stage);
 
     this.cache = localStorage.getItem(LOCALSTORAGE_ID) ?
@@ -110,7 +110,7 @@ export default class WritingScreen extends Screen {
   }
 
   updateDictionary() {
-    const selection = window.dictionary.slice(-10);
+    const selection = window.dictionary.slice(-5);
     this.$dictionary.html('');
 
     selection.forEach((word) => {
@@ -159,6 +159,7 @@ export default class WritingScreen extends Screen {
       sentence.tokens.forEach(token => this.tokens.push(token));
     });
 
+    console.log(this.text);
     setTimeout(() => {
       this.wait();
     }, 5000);
@@ -166,6 +167,7 @@ export default class WritingScreen extends Screen {
 
   destroy() {
     super.destroy();
+    this.$dictionary.removeClass('dictionary-show');
     if (this.lastTimeoutId) {
       clearTimeout(this.lastTimeoutId);
     }

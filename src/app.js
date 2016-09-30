@@ -115,10 +115,35 @@ class App {
       });
   }
 
+  updateTimer() {
+    const endTime = new Date();
+    let timeDiff = endTime - this.startTime;
+
+    timeDiff /= 1000;
+    const seconds = this.pad(Math.round(timeDiff % 60), 2);
+    timeDiff = Math.floor(timeDiff / 60);
+    const minutes = this.pad(Math.round(timeDiff % 60), 2);
+
+    this.$timer.text(`${minutes}:${seconds}`);
+  }
+
+  pad(num, size) {
+    let s = num + '';
+    while (s.length < size) s = '0' + s;
+    return s;
+  }
+
   constructor($node) {
     this.$node = $node;
     this.createCurrentScreen();
 
+    const $dictionary = $('<div></div>').addClass('dictionary');
+    $('body').append($dictionary);
+
+    this.startTime = new Date();
+    this.$timer = $('<div></div>').addClass('timer');
+    $('body').append(this.$timer);
+    setInterval(() => this.updateTimer(), 1000);
     this.initInputEvents();
   }
 }
