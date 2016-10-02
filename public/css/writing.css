@@ -69,6 +69,7 @@ body {
 }
 
 .class-NN,
+.class-NNP,
 .class-NNS {
     color: white
 }
@@ -97,7 +98,7 @@ body {
 }
 
 .class-NNP {
-    color:red;
+    /*color:red;*/
 }
 
 .class-PRP {

@@ -4,4 +4,5 @@ node_modules
 public/swf
 public/autobreeder
 public/turtles
-public/sound/
+public/sound
+public/video
