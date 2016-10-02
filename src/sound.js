@@ -15,13 +15,14 @@ export default class SoundPlayer {
     }, 100);
   }
 
-  destroy() {
+  destroy(done) {
     const intervalId = setInterval(() => {
       this.audio.volume *= 0.925;
       if (this.audio.volume < 0.01) {
         clearInterval(intervalId);
         this.audio.pause();
         delete this.audio;
+        done();
       }
     }, 100);
   }

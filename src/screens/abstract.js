@@ -34,19 +34,23 @@ export default class Screen extends EventEmitter {
     });
   }
 
+  kill() {
+    setTimeout(() => {
+      this.$screen.remove();
+      this.emit('SCREEN_REMOVED', this.screenData);
+    }, FADE_DURATION);
+  }
+
   destroy() {
     if (this.commitSuicide) return;
     this.commitSuicide = true;
     this.hide();
 
     if (this.soundPlayer) {
-      this.soundPlayer.destroy();
+      this.soundPlayer.destroy(() => this.kill());
+    } else {
+      this.kill();
     }
-
-    setTimeout(() => {
-      this.$screen.remove();
-      this.emit('SCREEN_REMOVED', this.screenData);
-    }, FADE_DURATION);
   }
 }
 

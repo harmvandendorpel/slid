@@ -8,12 +8,13 @@ const script = [
   { type: SlideTypes.TEXT, text: '"The problem of intelligence seems hopelessly profound."' },
   { type: SlideTypes.TEXT, text: 'Consciousness has something to do with intelligence.' },
   { type: SlideTypes.TEXT, text: 'That is also a hopelessly profound problem.' },
+  { type: SlideTypes.TEXT, text: 'Besides that, I have probably put too many things into this presentation.' },
 
   // Hopelessly Profound
   { file: 'swf/drostescrolls.swf', type: SlideTypes.FLASH },
 
   // Aesthetic dimension
-
+  
   // Static Monuments
   { type: SlideTypes.TEXT, text: 'Indestructible, immutable beacons in time.' },
 
@@ -31,7 +32,7 @@ const script = [
   // The associations between information
 
   { type: SlideTypes.TEXT, text: 'As it has become impossible to construct an encompassing overview we must learn to navigate the network based on our local awareness.'},
-  { type: SlideTypes.TEXT, text: 'From navigating in time a narrative emerges.' },
+  { type: SlideTypes.TEXT, text: 'The traces of navigating in time create a narrative.' },
   
   // Software
   { type: SlideTypes.TEXT, text: 'software does not come into being by an intuitive gesture or magical spell.'},
@@ -40,14 +41,16 @@ const script = [
   { type: SlideTypes.TEXT, text: 'A slowly dying orphan, forsaken by its creator and eventually by its users as well.'},
 
   // Death imitates Language
+  
+  
   { type: SlideTypes.IMAGE, file: 'img/ReleaseEarlyAbrons_08.jpg' },
   { url: 'video/strategies.html', type: SlideTypes.IFRAME },
   { type: SlideTypes.IMAGE, file: 'img/arp-squares.jpg' },
-
+  { type: SlideTypes.TEXT, text: 'Death imitates language.' }, 
   { type: SlideTypes.IMAGE, file: 'img/dil-04.png' },
   { url: 'http://death.imitates.org/', type: SlideTypes.IFRAME },
   { type: SlideTypes.IMAGE, file: 'img/b.jpg' },
-  { url: '/autobreeder/demo.html', type: SlideTypes.IFRAME, sound: '/sound/sound1.wav' },
+  { url: '/autobreeder/demo.html', type: SlideTypes.IFRAME, sound: '/sound/a.wav' },
 
   // New and Different
 
@@ -81,13 +84,12 @@ const script = [
   { type: SlideTypes.IMAGE, file: 'img/Arp_MustacheHat1923.jpg' },
   { type: SlideTypes.IMAGE, file: 'img/b.png' },
   { type: SlideTypes.IMAGE, file: 'img/both-turtles.jpg' },
-  { url: '/turtles/', type: SlideTypes.IFRAME },
+  { url: '/turtles/', type: SlideTypes.IFRAME, sound: '/sound/b.wav' },
 
   // New pedagogy
   { type: SlideTypes.IMAGE, file: 'img/beuys21-larger.jpg' },
-  
-  { type: SlideTypes.TEXT, text: 'We gotta be very careful not to confuse ourselves.'}
-  
+  { type: SlideTypes.TEXT, text: 'Do we have a pedagogy for machine learning?' },
+  { type: SlideTypes.TEXT, text: 'We gotta be very careful not to confuse ourselves.' }
 ];
 
 script.forEach((element, index) => {

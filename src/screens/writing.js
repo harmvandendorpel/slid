@@ -163,7 +163,7 @@ export default class WritingScreen extends Screen {
     console.log(this.text);
     setTimeout(() => {
       this.wait();
-    }, 5000);
+    }, 4000);
   }
 
   destroy() {
