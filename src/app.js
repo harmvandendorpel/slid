@@ -141,7 +141,7 @@ class App {
     timeDiff = Math.floor(timeDiff / 60);
     const minutes = this.pad(Math.round(timeDiff % 60), 2);
 
-    this.$timer.text(`${minutes}:${seconds} – ${state.index + 1} / ${script.length}`);
+    this.$timer.text(`${minutes}:${seconds}–${state.index + 1}/${script.length}`);
   }
 
   pad(num, size) {
@@ -152,10 +152,10 @@ class App {
 
   constructor($node) {
     this.$node = $node;
-    this.createCurrentScreen();
-
     const $dictionary = $('<div></div>').addClass('dictionary');
     $('body').append($dictionary);
+
+    this.createCurrentScreen();
 
     this.startTime = new Date();
     this.$timer = $('<div></div>').addClass('timer');

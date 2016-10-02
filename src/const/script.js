@@ -1,48 +1,85 @@
 import SlideTypes from './slide-types';
 
 const script = [
-  { url: '/autobreeder/demo.html', type: SlideTypes.IFRAME, sound: '/sound/sound1.wav' },
+
+  // intro
   { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
-  
-  { type: SlideTypes.TEXT, text: 'She asked me, "how can you know you know something?"' },
-  { type: SlideTypes.TEXT, text: 'We\'re exploring.' },
-  { url: '/turtles/', type: SlideTypes.IFRAME },
-  { type: SlideTypes.TEXT, text: 'We\'re trying to find out as much as we can about the world.' },
-  { type: SlideTypes.TEXT, text: 'People sometimes ask me: "are you looking for the ultimate truth?"' },
-  { type: SlideTypes.TEXT, text: 'No, I\'m not.' },
-  { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
-  { type: SlideTypes.TEXT, text: 'I\'m just looking around me in order to find out more about the world.' },
-  { type: SlideTypes.TEXT, text: 'And if it turns out that there is a simple ultimate law that explains everything, so be it.' },
-  { type: SlideTypes.TEXT, text: 'That would be a very nice discovery.' },
-  { type: SlideTypes.TEXT, text: 'But, if the truth turns out to be like an onion with millions of layers, then that\'s the way it is.' },
-  
+  { type: SlideTypes.TEXT, text: 'Hello, my name is Harm.' },
+  { type: SlideTypes.TEXT, text: 'I was born in Holland, and currently live and work in Berlin.' },
+  { type: SlideTypes.TEXT, text: 'I am an artist and programmer (in that particular order).' },
+  { type: SlideTypes.TEXT, text: '"The problem of intelligence seems hopelessly profound."' },
+
+  // Hopelessly Profound
   { file: 'swf/drostescrolls.swf', type: SlideTypes.FLASH },
-  { type: SlideTypes.TEXT, text: 'All people must rise, all people must fall. Nothing is lost but all are gone.' },
+
+  // Aesthetic dimension
+  // Static Monuments
+  { type: SlideTypes.TEXT, text: 'Indestructible, immutable beacons in time.'},
+
+  // Sculptural Logic
+  // Make software sculptural
+  // Make object based art unstable
+  // Horizontality vs. verticality
+  { type: SlideTypes.TEXT, text: 'While monuments were vertically erected, software is horizontally spread thin across the network.' },
+
+  // deli near info
+  { url: 'http://delinear.info/75f69e9a9f', type: SlideTypes.IFRAME },
+  { url: 'http://delinear.info/da1e3e85d4', type: SlideTypes.IFRAME },
+  { url: 'http://delinear.info/11133c9783', type: SlideTypes.IFRAME },
+
+  // The associations between information
+
+  { type: SlideTypes.TEXT, text: 'As it has become impossible to construct an encompassing overview we must learn to navigate the network based on our local awareness.'},
+  { type: SlideTypes.TEXT, text: 'Navigation over time constructs a narrative.'},
+
+  // Software
+  // Abandonware
+  { type: SlideTypes.TEXT, text: 'A slowly dying orphan, forsaken by its creator and eventually by its users as well.'},
+
+  // Death imitates Language
+  { type: SlideTypes.IMAGE, file: 'img/dil-04.png' },
   { url: 'http://death.imitates.org/', type: SlideTypes.IFRAME },
-  { type: SlideTypes.TEXT, text: 'When we break things down to their smallest parts, they will each seem dry as dust.' },
-  { type: SlideTypes.TEXT, text: 'As if some fundamental essence has been lost.' },
-  { type: SlideTypes.TEXT, text: 'Think of the classic brain in a vat Descartes spoke of.' },
-  { type: SlideTypes.TEXT, text: 'Think of the way in which the brain experiences the world.' },
-  { type: SlideTypes.TEXT, text: 'Creating something that already exists and presenting it as new is considered plagiarising.' },
-  { type: SlideTypes.TEXT, text: 'Creating something that already exists and presenting it as old is considered kitsch.' },
-  { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
-  { type: SlideTypes.TEXT, text: 'It\'s the same brain. It\'s alive. It\'s undamaged.' },
-  { type: SlideTypes.TEXT, text: 'In fact, it\'s completely untouched. We have not even opened the inner membranes.' },
-  { type: SlideTypes.TEXT, text: 'The big difference would be that we have severed every single nerve that leads into it and this means that your thinking would no longer be influenced by your senses.' },
-  { type: SlideTypes.TEXT, text: 'You\'d be living in an extraordinarily pure and detached world.' },
-  { type: SlideTypes.TEXT, text: 'Nothing to bother you at all, not even pain. You could not possibly feel pain because there would not be any nerves to feel it with.' },
-  { type: SlideTypes.TEXT, text: 'In a way, it would be an almost perfect situation. No worries or fears or pains or hunger or thirst.' },
-  { type: SlideTypes.TEXT, text: 'Not even any desires. Just your memories and your thoughts.' },
-  { file: 'img/a.jpg', type: SlideTypes.IMAGE },
-  { file: 'img/b.jpg', type: SlideTypes.IMAGE },
-  { file: 'img/a.png', type: SlideTypes.IMAGE },
-  { url: 'http://death.imitates.org/', type: SlideTypes.IFRAME },
-  { file: 'img/b.png', type: SlideTypes.IMAGE },
-  
-  { file: 'img/d.jpg', type: SlideTypes.IMAGE },
-  { file: 'img/c.jpg', type: SlideTypes.IMAGE },
-  { file: 'swf/highway.swf', type: SlideTypes.FLASH },
-  { file: 'swf/whiterectangle.swf', type: SlideTypes.FLASH },
+  { url: 'http://death.imitates.org/language/e9a90066', type: SlideTypes.IFRAME },
+  { type: SlideTypes.IMAGE, file: 'img/e9a900661fcbd57bf8e1cb3dc1e46b8ef2ad02a0.jpg' },
+  { type: SlideTypes.IMAGE, file: 'img/b.jpg' },
+  { url: '/autobreeder/demo.html', type: SlideTypes.IFRAME, sound: '/sound/sound1.wav' },
+
+  // New and Different
+
+  { type: SlideTypes.TEXT, text: 'Creating something that already exists and presenting it as new is considered plagiarising.'},
+  { type: SlideTypes.TEXT, text: 'Creating something that already exists and presenting it as old is considered kitsch.'},
+
+  // Cryogenics
+  { type: SlideTypes.IMAGE, file: 'img/Cryonics_satellite_interior-larger.jpg' },
+
+  { type: SlideTypes.IMAGE, file: 'img/dil-02.jpg' },
+  { type: SlideTypes.IMAGE, file: 'img/dil-03.jpg' },
+  { type: SlideTypes.IMAGE, file: 'img/dil-01.jpg' },
+
+  // Blasphemy
+
+  // Change your mind
+
+  // Talking Turtles
+  { type: SlideTypes.TEXT, text: 'Knowledge must be constructed by the learner rather than taught by an authority or read passively from the world.'},
+  { type: SlideTypes.TEXT, text: 'The sentiment of Learning is Optimism'},
+
+  { type: SlideTypes.IMAGE, file: 'img/c.jpg' },
+  { type: SlideTypes.IMAGE, file: 'img/d-larger.jpg' },
+
+  { type: SlideTypes.TEXT, text: 'Programming is the sweet spot, the high leverage point in a digital society. If we don’t learn to program, we risk being programmed ourselves.' },
+
+  { type: SlideTypes.IMAGE, file: 'img/screenshot.png' },
+  { type: SlideTypes.IMAGE, file: 'img/talking-turtles-09.png' },
+  { type: SlideTypes.IMAGE, file: 'img/arp2.jpg' },
+  { type: SlideTypes.IMAGE, file: 'img/a.png' },
+  { type: SlideTypes.IMAGE, file: 'img/Arp_MustacheHat1923.jpg' },
+  { type: SlideTypes.IMAGE, file: 'img/b.png' },
+  { type: SlideTypes.IMAGE, file: 'img/both-turtles.jpg' },
+  { url: '/turtles/', type: SlideTypes.IFRAME },
+
+  // New pedagogy
+  { type: SlideTypes.IMAGE, file: 'img/beuys21-larger.jpg' }
 ];
 
 script.forEach((element, index) => {
