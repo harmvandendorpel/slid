@@ -76,6 +76,7 @@ body {
 
 .class-VB,
 .class-VBP,
+.class-VBD,
 .class-VBN,
 .class-VBZ,
 .class-VBG,
@@ -98,7 +99,7 @@ body {
 }
 
 .class-NNP {
-    /*color:red;*/
+    color:red;
 }
 
 .class-PRP {
@@ -121,7 +122,7 @@ body {
 }
 
 .class-JJ,
-.class-VBD,
+
 .class-RB {
     font-style: italic;
     color: #ccc;

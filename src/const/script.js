@@ -1,14 +1,12 @@
 import SlideTypes from './slide-types';
 
 const script = [
-  { url: 'video/strategies.html', type: SlideTypes.IFRAME },
   // intro
   { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
   { type: SlideTypes.TEXT, text: 'Hello, my name is Harm.' },
-  { type: SlideTypes.TEXT, text: 'I was born in Holland, and live and work in Berlin.' },
   { type: SlideTypes.TEXT, text: 'I am an artist who programs.' },
   { type: SlideTypes.TEXT, text: '"The problem of intelligence seems hopelessly profound."' },
-  { type: SlideTypes.TEXT, text: 'Consciousness has something to do with this.' },
+  { type: SlideTypes.TEXT, text: 'Consciousness has something to do with intelligence.' },
   { type: SlideTypes.TEXT, text: 'That is also a hopelessly profound problem.' },
 
   // Hopelessly Profound
@@ -33,18 +31,17 @@ const script = [
   // The associations between information
 
   { type: SlideTypes.TEXT, text: 'As it has become impossible to construct an encompassing overview we must learn to navigate the network based on our local awareness.'},
-  { type: SlideTypes.TEXT, text: 'Navigation over time constructs a narrative.' },
-
-  { url: 'video/Strategies_HarmvandenDorpel_2011.mov', type: SlideTypes.IFRAME },
-
+  { type: SlideTypes.TEXT, text: 'From navigating in time a narrative emerges.' },
+  
   // Software
-  { type: SlideTypes.TEXT, text: 'Software does not come into being by an intuitive gesture or magical spell.'},
+  { type: SlideTypes.TEXT, text: 'software does not come into being by an intuitive gesture or magical spell.'},
 
   // Abandonware
   { type: SlideTypes.TEXT, text: 'A slowly dying orphan, forsaken by its creator and eventually by its users as well.'},
 
   // Death imitates Language
   { type: SlideTypes.IMAGE, file: 'img/ReleaseEarlyAbrons_08.jpg' },
+  { url: 'video/strategies.html', type: SlideTypes.IFRAME },
   { type: SlideTypes.IMAGE, file: 'img/arp-squares.jpg' },
 
   { type: SlideTypes.IMAGE, file: 'img/dil-04.png' },
@@ -70,13 +67,13 @@ const script = [
 
   // Talking Turtles
   { type: SlideTypes.TEXT, text: 'Knowledge must be constructed by the learner rather than taught by an authority or read passively from the world.'},
-  { type: SlideTypes.TEXT, text: 'The sentiment of Learning is Optimism'},
+  { type: SlideTypes.TEXT, text: 'The sentiment of learning is optimism.'},
 
   { type: SlideTypes.IMAGE, file: 'img/c.jpg' },
   { type: SlideTypes.IMAGE, file: 'img/d-larger.jpg' },
 
-  { type: SlideTypes.TEXT, text: 'Programming is the sweet spot, the high leverage point in a digital society. If we don’t learn to program, we risk being programmed ourselves.' },
-
+  { type: SlideTypes.TEXT, text: '"Programming is the sweet spot, the high leverage point in a digital society."' },
+  { type: SlideTypes.TEXT, text: '"If we don’t learn to program, we risk being programmed ourselves."' },
   { type: SlideTypes.IMAGE, file: 'img/screenshot.png' },
   { type: SlideTypes.IMAGE, file: 'img/talking-turtles-09.png' },
   { type: SlideTypes.IMAGE, file: 'img/arp2.jpg' },
@@ -87,7 +84,10 @@ const script = [
   { url: '/turtles/', type: SlideTypes.IFRAME },
 
   // New pedagogy
-  { type: SlideTypes.IMAGE, file: 'img/beuys21-larger.jpg' }
+  { type: SlideTypes.IMAGE, file: 'img/beuys21-larger.jpg' },
+  
+  { type: SlideTypes.TEXT, text: 'We gotta be very careful not to confuse ourselves.'}
+  
 ];
 
 script.forEach((element, index) => {

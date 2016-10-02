@@ -92,7 +92,7 @@ export default class WritingScreen extends Screen {
     switch (token.pos) {
       case 'NN':
       case 'NNS':
-      case 'NNP':
+      // case 'NNP':
         this.addToDictionary(token.originalText);
         break;
 
