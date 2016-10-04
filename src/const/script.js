@@ -4,19 +4,19 @@ const script = [
   // intro
   { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
   { type: SlideTypes.TEXT, text: 'Hello, my name is Harm.' },
-  { type: SlideTypes.TEXT, text: 'I am an artist who programs.' },
-  { type: SlideTypes.TEXT, text: 'Let\'s talk about software as a medium (not a technology)' },
-  { type: SlideTypes.TEXT, text: 'Let\'s consider software as cultural production.' },
-  { type: SlideTypes.TEXT, text: 'Let\'s consider computer programming as a artistic practice.'},
+  // { type: SlideTypes.TEXT, text: 'I am an artist who programs.' },
+  { type: SlideTypes.TEXT, text: 'software as a medium, not a technology' },
+  { type: SlideTypes.TEXT, text: 'software as cultural production' },
+  { type: SlideTypes.TEXT, text: 'computer programming as an artistic practice' },
   
   // then we can compare it to other means of cultural production
   //
+  { type: SlideTypes.TEXT, text: 'software versus sculpture' },
+  { type: SlideTypes.TEXT, text: 'software as sculpture' },
   // such as sculpture
   
   
-  // { type: SlideTypes.TEXT, text: '"The problem of intelligence seems hopelessly profound."' },
-  // { type: SlideTypes.TEXT, text: 'Consciousness has something to do with intelligence.' },
-  // { type: SlideTypes.TEXT, text: 'That is also a hopelessly profound problem.' },
+  
   // { type: SlideTypes.TEXT, text: 'Besides that, I have probably put too many things into this presentation.' },
 
   // Hopelessly Profound
@@ -24,29 +24,35 @@ const script = [
 
   // Aesthetic dimension
   
+  { type: SlideTypes.IMAGE, file: 'img/71382918.jpg' },
   // Static Monuments
   { type: SlideTypes.TEXT, text: 'Indestructible, immutable beacons in time.' },
 
+  
   // Sculptural Logic
   // { type: SlideTypes.TEXT, text: 'Mutable versus Immutable.' },
 
   // Horizontality vs. verticality
   { type: SlideTypes.TEXT, text: 'While monuments were vertically erected, software is horizontally spread thin across the network.' },
   
-  { type: SlideTypes.TEXT, text: 'software does not come into being erected.' },// by an intuitive gesture or magical spell.' },
-  
   { type: SlideTypes.TEXT, text: 'software grows in iterations and it is never complete.' }, // by an intuitive gesture or magical spell.' },
-  // Abandonware
-  { type: SlideTypes.TEXT, text: 'A slowly dying orphan, forsaken by its creator and eventually by its users as well.' },
   
-  { type: SlideTypes.TEXT, text: 'I am going to show you a few projects based around questions of perpetual change and instability'},
+  { type: SlideTypes.TEXT, text: 'software is alive and demands its own improvement' },
+  { type: SlideTypes.TEXT, text: 'A slowly dying orphan, forsaken by its creator and eventually by its users :(' },
+  { type: SlideTypes.TEXT, text: 'abandonware' },
+  
+  { type: SlideTypes.TEXT, text: 'change disintegrates sculpture' },
+  { type: SlideTypes.TEXT, text: 'stasis disintegrates software' },
+  
+  { type: SlideTypes.TEXT, text: 'I am going to show you a few projects based on these questions of perpetual change and instability.' },
   
   // deli near info
   
   { type: SlideTypes.TEXT, text: 'Delinear info: a deli near info' },
   
-  { type: SlideTypes.TEXT, text: 'Social media has linear timelines.' },
-  { type: SlideTypes.TEXT, text: 'The new is added on top, and the old at the bottom is fading away into oblivion.' },
+  { type: SlideTypes.TEXT, text: 'social media network' },
+  { type: SlideTypes.TEXT, text: 'linear timelines' },
+  { type: SlideTypes.TEXT, text: 'The \'new\' is added on top, and the \'old\' at the bottom fades away into oblivion.' },
   
   
   { url: 'http://delinear.info/75f69e9a9f', type: SlideTypes.IFRAME },
@@ -55,11 +61,12 @@ const script = [
   { type: SlideTypes.TEXT, text: 'Potential meaning is established in the space between chunks of information. ' },
   
   
-  { type: SlideTypes.TEXT, text: 'It has become impossible to construct an encompassing overview.' },
-  { type: SlideTypes.TEXT, text: 'Let\'s develop heuristics to navigate the network based on local awareness.' },
+  { type: SlideTypes.TEXT, text: 'Impossible to construct an encompassing overview' },
+  { type: SlideTypes.TEXT, text: 'Heuristics for local awareness' },
   { type: SlideTypes.TEXT, text: 'The traces of navigating in time create a narrative.' },
   { type: SlideTypes.IMAGE, file: 'img/ReleaseEarlyAbrons_08.jpg' },
-  { type: SlideTypes.TEXT, text: 'The structure needs to be anachronistic.' },
+  { type: SlideTypes.TEXT, text: 'anachronistic structure' },
+  { type: SlideTypes.TEXT, text: 'suspends hierarchy' },
   // Software
   
   // semiotics of natural language
@@ -95,10 +102,14 @@ const script = [
   { type: SlideTypes.IMAGE, file: 'img/dil-01.jpg' },
   
   
-  { type: SlideTypes.TEXT, text: 'Could the work itself grow?' },
+  { type: SlideTypes.TEXT, text: 'Could the work grow by itself?' },
   { type: SlideTypes.TEXT, text: 'Growth of intelligence requires learning.' },
   
   // Talking Turtles
+  { type: SlideTypes.TEXT, text: '"The problem of intelligence seems hopelessly profound."' },
+  // { type: SlideTypes.TEXT, text: 'Consciousness has something to do with intelligence.' },
+  // { type: SlideTypes.TEXT, text: 'That is also a hopelessly profound problem.' },
+  
   { type: SlideTypes.IMAGE, file: 'img/minsky-papert-1971-csolomon_custom-fedfe48abb5cf61d250d8ed45862673524e77493.jpg' },
   { type: SlideTypes.IMAGE, file: 'img/c.jpg' },
   { type: SlideTypes.TEXT, text: 'Knowledge must be constructed by the learner rather than taught by an authority or read passively from the world.' },
@@ -118,10 +129,12 @@ const script = [
   { type: SlideTypes.IMAGE, file: 'img/both-turtles.jpg' },
   
   // New pedagogy
+  { type: SlideTypes.TEXT, text: 'How to explain pictures to a dead hare?' },
   { type: SlideTypes.IMAGE, file: 'img/beuys21-larger.jpg' },
   { type: SlideTypes.TEXT, text: 'Do we have a pedagogy for machine learning?' },
   
   { type: SlideTypes.TEXT, text: 'Thank you. For updates follow me on twitter @harmvddorpel ' },
+  { file: 'swf/dibbets.swf', type: SlideTypes.FLASH }
 ];
 
 script.forEach((element, index) => {

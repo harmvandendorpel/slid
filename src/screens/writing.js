@@ -131,16 +131,16 @@ export default class WritingScreen extends Screen {
 
     switch (token.originalText) {
       case ',':
-        duration = 2000;
+        duration = 1000;
         break;
 
       case '.':
-        duration = 3000;
+        duration = 2000;
         // token.originalText = '⬚';
         break;
 
       default:
-        duration = token.originalText.length * 125 + 200;
+        duration = token.originalText.length * 75 + 100;
     }
 
     this.displayToken(token);
@@ -163,7 +163,7 @@ export default class WritingScreen extends Screen {
     console.log(this.text);
     setTimeout(() => {
       this.wait();
-    }, 4000);
+    }, 3000);
   }
 
   destroy() {

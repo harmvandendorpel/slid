@@ -106,6 +106,7 @@ class App {
         return false;
       })
       .bind('keyup', (e) => {
+        console.log(e.which);
         switch (e.which) {
           case 78: // key 'n'
             this.createCurrentScreen();
@@ -133,6 +134,7 @@ class App {
   }
 
   updateTimer() {
+    const currentScreenData = script[state.index];
     const endTime = new Date();
     let timeDiff = endTime - this.startTime;
 
@@ -141,7 +143,18 @@ class App {
     timeDiff = Math.floor(timeDiff / 60);
     const minutes = this.pad(Math.round(timeDiff % 60), 2);
 
-    this.$timer.text(`${minutes}:${seconds}–${state.index + 1}/${script.length}`);
+    let moreInfo = '';
+    if (currentScreenData.type === SlideTypes.TEXT) {
+      moreInfo = currentScreenData.text;
+    }
+
+    if (state.index + 1 < script.length) {
+      if (script[state.index + 1].type === SlideTypes.TEXT) {
+        moreInfo += ` | ${script[state.index + 1].text}`;
+      }
+    }
+
+    this.$timer.text(`${minutes}:${seconds}–${state.index + 1}/${script.length}: ${moreInfo}`);
   }
 
   pad(num, size) {
