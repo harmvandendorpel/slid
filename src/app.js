@@ -112,6 +112,10 @@ class App {
             this.createCurrentScreen();
             break;
 
+          case 84:
+            this.startTime = new Date();
+            break;
+
           case 37:
             this.previousScreen();
             break;
@@ -133,28 +137,46 @@ class App {
       });
   }
 
-  updateTimer() {
-    const currentScreenData = script[state.index];
-    const endTime = new Date();
-    let timeDiff = endTime - this.startTime;
-
+  formatTime(timeDiff) {
     timeDiff /= 1000;
     const seconds = this.pad(Math.round(timeDiff % 60), 2);
     timeDiff = Math.floor(timeDiff / 60);
     const minutes = this.pad(Math.round(timeDiff % 60), 2);
+    return `${minutes}:${seconds}`;
+  }
 
-    let moreInfo = '';
-    if (currentScreenData.type === SlideTypes.TEXT) {
-      moreInfo = currentScreenData.text;
+  moreInfo(i) {
+    const currentScreenData = script[i];
+    switch (currentScreenData.type) {
+      case SlideTypes.TEXT:
+        return currentScreenData.text.substring(0, 32);
+
+      case SlideTypes.IFRAME:
+        return currentScreenData.url;
+
+      case SlideTypes.IMAGE:
+      case SlideTypes.FLASH:
+        return currentScreenData.file;
+
     }
+  }
+
+  updateTimer() {
+    const endTime = new Date();
+    const timeDiff = endTime - this.startTime;
+
+    let moreInfo = this.moreInfo(state.index);
 
     if (state.index + 1 < script.length) {
-      if (script[state.index + 1].type === SlideTypes.TEXT) {
-        moreInfo += ` | ${script[state.index + 1].text}`;
-      }
+      moreInfo += ` | ${this.moreInfo(state.index + 1)}`;
     }
 
-    this.$timer.text(`${minutes}:${seconds}–${state.index + 1}/${script.length}: ${moreInfo}`);
+    const completed = this.formatTime(
+      (script.length / (state.index + 1)) *
+      (endTime - this.startTime)
+    );
+
+    this.$timer.text(`${this.formatTime(timeDiff)} | ${state.index + 1}/${script.length} | ${moreInfo} | ${completed}`);
   }
 
   pad(num, size) {
