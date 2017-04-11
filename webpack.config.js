@@ -6,7 +6,7 @@ module.exports = {
     path: path.join(__dirname, 'public/js'),
     filename: 'bundle.js'
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   module: {
     loaders: [
       {
