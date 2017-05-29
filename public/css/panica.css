@@ -20,7 +20,8 @@ body {
 
 body {
     /*background-color:#202020;*/
-    background-color: #2b2b2b;
+    background-color: black;
+    /*background-color: #2b2b2b;*/
 }
 
 .screen {
@@ -78,5 +79,5 @@ iframe {
     padding: 0;
     font-size: 1vw;
     line-height:100%;
-    color: #505050;
+    color: #404040;
 }
