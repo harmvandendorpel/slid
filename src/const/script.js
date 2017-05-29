@@ -2,11 +2,12 @@ import SlideTypes from './slide-types';
 
 const script = [
   // intro
+  // { url: 'http://localhost:3000/', type: SlideTypes.IFRAME },
   { file: 'swf/dibbets.swf', type: SlideTypes.FLASH },
+  { type: SlideTypes.TEXT, text: 'ECAL Lausanne, Augmented Photography – May 30th, 2017' },
   { type: SlideTypes.TEXT, text: 'Harm van den Dorpel' },
 
   // { url: 'http://skiz.io/huttonweed', type: SlideTypes.IFRAME },
-  { type: SlideTypes.TEXT, text: 'Some things that work in one decade, do not work in the next.' },
   { type: SlideTypes.TEXT, text: 'software as a medium, not a technology' },
   { type: SlideTypes.TEXT, text: 'software as cultural production' },
   { type: SlideTypes.TEXT, text: 'computer programming as an artistic practice' },
@@ -20,18 +21,15 @@ const script = [
   { type: SlideTypes.TEXT, text: 'software as sculpture' },
   // such as sculpture
 
-
-  // { type: SlideTypes.TEXT, text: 'Besides that, I have probably put too many things into this presentation.' },
-
   // Hopelessly Profound
-  // { file: 'swf/drostescrolls.swf', type: SlideTypes.FLASH },
+
 
   // Aesthetic dimension
 
   // Static Monuments
   { type: SlideTypes.TEXT, text: 'Indestructible, immutable beacons in time.' },
   { type: SlideTypes.TEXT, text: 'The desire to change a sculpture is blasphemous.' },
-  { type: SlideTypes.TEXT, text: 'Artist did not get it right the first time.' },
+  { type: SlideTypes.TEXT, text: 'The artist did not get it right the first time.' },
   { type: SlideTypes.TEXT, text: 'Iconoclasm breaks the spell.' },
   // Sculptural Logic
   // { type: SlideTypes.TEXT, text: 'Mutable versus Immutable.' },
@@ -40,7 +38,7 @@ const script = [
 
   //
   { type: SlideTypes.TEXT, text: 'While monuments were vertically erected, software is horizontally spread thin across the network.' },
-  { type: SlideTypes.TEXT, text: 'Electricity has made angels of us all - not angels in the Sunday school sense of being good or having wings, but spirit freed from flesh, capable of instant transportation anywhere. Edmund Carpenter, 1972' }, // by an intuitive gesture or magical spell.' },
+  { type: SlideTypes.TEXT, text: 'Electricity has made angels of us all - not angels in the Sunday school sense of being good or having wings, but spirit freed from flesh, capable of instant transportation anywhere. – Edmund Carpenter, 1972' }, // by an intuitive gesture or magical spell.' },
   { type: SlideTypes.TEXT, text: 'Software grows in iterations and is never complete.' }, // by an intuitive gesture or magical spell.' },
   { type: SlideTypes.TEXT, text: 'It does not emerge from an intuitive gesture.' }, //
   { type: SlideTypes.TEXT, text: 'Software is alive and seems to demand its own improvement.' },
@@ -164,6 +162,7 @@ const script = [
   { type: SlideTypes.TEXT, text: 'In a way, it would be an almost perfect situation. No worries or fears or pains or hunger or thirst. Not even any desires. Just your memories and your thoughts.' },
 
   { type: SlideTypes.TEXT, text: '"The problem of intelligence seems hopelessly profound."' },
+  { file: 'swf/drostescrolls.swf', type: SlideTypes.FLASH },
   { type: SlideTypes.TEXT, text: 'Consciousness has something to do with intelligence.' },
   { type: SlideTypes.TEXT, text: 'That is also a hopelessly profound problem.' },
   //

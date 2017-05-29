@@ -27367,10 +27367,11 @@
 
 	var script = [
 	// intro
-	{ file: 'swf/dibbets.swf', type: _slideTypes2.default.FLASH }, { type: _slideTypes2.default.TEXT, text: 'Harm van den Dorpel' },
+	// { url: 'http://localhost:3000/', type: SlideTypes.IFRAME },
+	{ file: 'swf/dibbets.swf', type: _slideTypes2.default.FLASH }, { type: _slideTypes2.default.TEXT, text: 'ECAL Lausanne, Augmented Photography – May 30th, 2017' }, { type: _slideTypes2.default.TEXT, text: 'Harm van den Dorpel' },
 
 	// { url: 'http://skiz.io/huttonweed', type: SlideTypes.IFRAME },
-	{ type: _slideTypes2.default.TEXT, text: 'Some things that work in one decade, do not work in the next.' }, { type: _slideTypes2.default.TEXT, text: 'software as a medium, not a technology' }, { type: _slideTypes2.default.TEXT, text: 'software as cultural production' }, { type: _slideTypes2.default.TEXT, text: 'computer programming as an artistic practice' },
+	{ type: _slideTypes2.default.TEXT, text: 'software as a medium, not a technology' }, { type: _slideTypes2.default.TEXT, text: 'software as cultural production' }, { type: _slideTypes2.default.TEXT, text: 'computer programming as an artistic practice' },
 
 	// then we can compare it to other means of cultural production
 	//
@@ -27381,23 +27382,20 @@
 	{ type: _slideTypes2.default.TEXT, text: 'software as sculpture' },
 	// such as sculpture
 
-
-	// { type: SlideTypes.TEXT, text: 'Besides that, I have probably put too many things into this presentation.' },
-
 	// Hopelessly Profound
-	// { file: 'swf/drostescrolls.swf', type: SlideTypes.FLASH },
+
 
 	// Aesthetic dimension
 
 	// Static Monuments
-	{ type: _slideTypes2.default.TEXT, text: 'Indestructible, immutable beacons in time.' }, { type: _slideTypes2.default.TEXT, text: 'The desire to change a sculpture is blasphemous.' }, { type: _slideTypes2.default.TEXT, text: 'Artist did not get it right the first time.' }, { type: _slideTypes2.default.TEXT, text: 'Iconoclasm breaks the spell.' },
+	{ type: _slideTypes2.default.TEXT, text: 'Indestructible, immutable beacons in time.' }, { type: _slideTypes2.default.TEXT, text: 'The desire to change a sculpture is blasphemous.' }, { type: _slideTypes2.default.TEXT, text: 'The artist did not get it right the first time.' }, { type: _slideTypes2.default.TEXT, text: 'Iconoclasm breaks the spell.' },
 	// Sculptural Logic
 	// { type: SlideTypes.TEXT, text: 'Mutable versus Immutable.' },
 
 	// Horizontality vs. verticality
 
 	//
-	{ type: _slideTypes2.default.TEXT, text: 'While monuments were vertically erected, software is horizontally spread thin across the network.' }, { type: _slideTypes2.default.TEXT, text: 'Electricity has made angels of us all - not angels in the Sunday school sense of being good or having wings, but spirit freed from flesh, capable of instant transportation anywhere. Edmund Carpenter, 1972' }, // by an intuitive gesture or magical spell.' },
+	{ type: _slideTypes2.default.TEXT, text: 'While monuments were vertically erected, software is horizontally spread thin across the network.' }, { type: _slideTypes2.default.TEXT, text: 'Electricity has made angels of us all - not angels in the Sunday school sense of being good or having wings, but spirit freed from flesh, capable of instant transportation anywhere. – Edmund Carpenter, 1972' }, // by an intuitive gesture or magical spell.' },
 	{ type: _slideTypes2.default.TEXT, text: 'Software grows in iterations and is never complete.' }, // by an intuitive gesture or magical spell.' },
 	{ type: _slideTypes2.default.TEXT, text: 'It does not emerge from an intuitive gesture.' }, //
 	{ type: _slideTypes2.default.TEXT, text: 'Software is alive and seems to demand its own improvement.' }, { type: _slideTypes2.default.TEXT, text: 'Abandonware' }, { type: _slideTypes2.default.TEXT, text: 'A slowly dying orphan, forsaken by its creator and eventually by its users :(' },
@@ -27442,7 +27440,7 @@
 	{ url: 'http://death.imitates.org/freezer', type: _slideTypes2.default.IFRAME }, { type: _slideTypes2.default.IMAGE, file: 'img/Cryonics_satellite_interior-larger.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/b.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/Shtonk-Vtejuwoh-Bonifac.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/dil-02.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/dil-03.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/dil-01.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/shifting-optics-4-02.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/shifting-optics-4-03.jpg' }, { url: 'http://death.imitates.org/', type: _slideTypes2.default.IFRAME }, { type: _slideTypes2.default.TEXT, text: '"Wer nicht denken will, fliegt raus"' }, { type: _slideTypes2.default.TEXT, text: 'Could the work grow by itself?' }, { type: _slideTypes2.default.TEXT, text: 'Growth of intelligence requires learning.' },
 
 	// Talking Turtles
-	{ type: _slideTypes2.default.TEXT, text: 'It\'s the same brain. It\'s alive. It\'s undamaged. In fact, it\'s completely untouched.' }, { type: _slideTypes2.default.TEXT, text: 'The big difference would be that we\'ve severed every single nerve that leads into it and this means that your thinking would no longer be influenced by your senses. ' }, { type: _slideTypes2.default.TEXT, text: 'You\'d be living in an extraordinarily pure and detached world. Nothing to bother you at all, not even pain. You couldn\'t possibly feel pain because there wouldn\'t be any nerves to feel it with.' }, { type: _slideTypes2.default.TEXT, text: 'In a way, it would be an almost perfect situation. No worries or fears or pains or hunger or thirst. Not even any desires. Just your memories and your thoughts.' }, { type: _slideTypes2.default.TEXT, text: '"The problem of intelligence seems hopelessly profound."' }, { type: _slideTypes2.default.TEXT, text: 'Consciousness has something to do with intelligence.' }, { type: _slideTypes2.default.TEXT, text: 'That is also a hopelessly profound problem.' },
+	{ type: _slideTypes2.default.TEXT, text: 'It\'s the same brain. It\'s alive. It\'s undamaged. In fact, it\'s completely untouched.' }, { type: _slideTypes2.default.TEXT, text: 'The big difference would be that we\'ve severed every single nerve that leads into it and this means that your thinking would no longer be influenced by your senses. ' }, { type: _slideTypes2.default.TEXT, text: 'You\'d be living in an extraordinarily pure and detached world. Nothing to bother you at all, not even pain. You couldn\'t possibly feel pain because there wouldn\'t be any nerves to feel it with.' }, { type: _slideTypes2.default.TEXT, text: 'In a way, it would be an almost perfect situation. No worries or fears or pains or hunger or thirst. Not even any desires. Just your memories and your thoughts.' }, { type: _slideTypes2.default.TEXT, text: '"The problem of intelligence seems hopelessly profound."' }, { file: 'swf/drostescrolls.swf', type: _slideTypes2.default.FLASH }, { type: _slideTypes2.default.TEXT, text: 'Consciousness has something to do with intelligence.' }, { type: _slideTypes2.default.TEXT, text: 'That is also a hopelessly profound problem.' },
 	//
 	{ type: _slideTypes2.default.IMAGE, file: 'img/minsky-papert-1971-csolomon_custom-fedfe48abb5cf61d250d8ed45862673524e77493.jpg' }, { type: _slideTypes2.default.IMAGE, file: 'img/c.jpg' }, { url: 'video/jean.html', type: _slideTypes2.default.IFRAME }, { type: _slideTypes2.default.TEXT, text: '"Knowledge must be constructed by the learner rather than taught by an authority or read passively from the world."' }, { type: _slideTypes2.default.TEXT, text: 'The sentiment of learning is one of optimism.' }, { type: _slideTypes2.default.TEXT, text: 'Programming to learn' }, { type: _slideTypes2.default.TEXT, text: 'Talking Turtles' }, { type: _slideTypes2.default.TEXT, text: '"Programming is the sweet spot, the high leverage point in a digital society."' }, { type: _slideTypes2.default.TEXT, text: '"If we don’t learn to program, we risk being programmed ourselves."' }, { type: _slideTypes2.default.IMAGE, file: 'img/screenshot.png' }, { type: _slideTypes2.default.IMAGE, file: 'img/talking-turtles-09.png' }, { type: _slideTypes2.default.IMAGE, file: 'img/a.png' }, { type: _slideTypes2.default.IMAGE, file: 'img/Arp_MustacheHat1923.jpg' },
 	// interbellum??
@@ -28269,7 +28267,9 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var url = 'http://corenlp.run/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
+	// const url = 'http://corenlp.run/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
+	var url = 'http://localhost:9000/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
+
 	var LOCALSTORAGE_ID = 'NLPCACHE';
 
 	var CLASS_MAPPING = {
@@ -28317,6 +28317,11 @@
 	  }
 
 	  _createClass(WritingScreen, [{
+	    key: 'startLowerCase',
+	    value: function startLowerCase(string) {
+	      return string.charAt(0).toLowerCase() + string.slice(1);
+	    }
+	  }, {
 	    key: 'getData',
 	    value: function getData(text) {
 	      var _this2 = this;

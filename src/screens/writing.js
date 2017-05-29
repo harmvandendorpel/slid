@@ -3,7 +3,9 @@ import pluralize from 'pluralize';
 import $ from 'jquery';
 import Screen from './abstract';
 
-const url = 'http://corenlp.run/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
+// const url = 'http://corenlp.run/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
+const url = 'http://localhost:9000/?properties=%7B%22annotators%22%3A%20%22tokenize%2Cssplit%2Cpos%22%2C%20%22date%22%3A%20%222016-09-18T17%3A11%3A41%22%2C%20%22coref.md.type%22%3A%20%22dep%22%2C%20%22coref.mode%22%3A%20%22statistical%22%7D';
+
 const LOCALSTORAGE_ID = 'NLPCACHE';
 
 const CLASS_MAPPING = {
@@ -43,6 +45,10 @@ export default class WritingScreen extends Screen {
 
       this.redraw();
     });
+  }
+
+  startLowerCase(string) {
+    return string.charAt(0).toLowerCase() + string.slice(1);
   }
 
   getData(text) {

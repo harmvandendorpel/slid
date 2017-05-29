@@ -9,10 +9,9 @@ body {
     margin:0;
     padding:0;
     font-family: -apple-system, BlinkMacSystemFont,"helvetica neue", helvetica, arial, sans-serif;
-    line-height:125%;
-
+    line-height: 125%;
     color: #bababa;
-    font-size: 4.2vw;
+    font-size: 4.15vw;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -99,7 +98,7 @@ body {
 }
 
 .class-NNP {
-    color:red;
+    /*color:red;*/
 }
 
 .class-PRP {
@@ -118,7 +117,7 @@ body {
 }
 
 .class-DT {
-    color:#ccc;
+    color:#aaa;
 }
 
 .class-JJ,
